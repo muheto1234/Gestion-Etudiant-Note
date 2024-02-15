@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {%  csrf_token %}
+        <label for="is_enseignant">Enseignant:</label>
+        <input type="checkbox" name="is_enseignant">
+        <label for="is_ettudiant">Etudiant:</label>
+        <input type="checkbox" name="is_ettudiant">
+
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

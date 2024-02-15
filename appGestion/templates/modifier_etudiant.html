@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier l'étudiant</title>
+</head>
+<body>
+    <h2>Modifier l'étudiant</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.etudiant_form.as_table }}
+        
+        {% for note_form in form.note_forms %}
+            {{ note_form.as_table }}
+        {% endfor %}
+        
+        <button type="submit">Enregistrer</button>
+    </form>
+</body>
+</html>
